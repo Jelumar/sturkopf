@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="de">
+    <head>
+        <title>MCIOT Game</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Game">
+        <meta name="keywords" content="MCIOT,Prüfung,Game">
+        <meta name="author" content="jlmb">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/base.css" rel="stylesheet" type="text/css">
+        <link href="css/settings.css" rel="stylesheet" type="text/css">
+        <link href="css/game.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <header>
+            <img src="https://jlmb.eu/images/logo.png" />
+            <h1>MCIOT Game</h1>
+            <nav>
+                <a onclick="game.tryStart(1)">Spiel starten!</a>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <img class="image-right" src="png/game.png">
+                <article>
+                    <h3>Über das Spiel</h3>
+                    <h4>14.09.2020</h4>
+                    <p>Das folgende Spiel wurde im Rahmen der Vorlesung „Mobile Computing und Internet der Dinge“ am Karlsruher Institut für Technologie entwickelt.</p>
+                    <p>Voraussetzungen, das Spiel starten zu können, sind ein Mobiles Gerät mit Sensoren für die Ausrichtung, sowie ein Browser, der diese Daten auslesen und an javascript weitergeben kann.</p>
+                    <p>Das Projekt wurde ausschlieslich mittels html, css und javascript erzeugt und verwendet nur JQuery und <a href="https://github.com/richtr/NoSleep.js">NoSleep.js</a> als Bibliotheken.</p>
+                    <a href="">Source</a>
+                </article>
+            </section>
+            <section>
+                <article>
+                    <h3>Sensoren</h3>
+                    <p>Um das Spiel nutzen zu können, werden Sensoren des Geräts genutzt. Sollte das Spiel nicht wie gewünscht funktionieren, kann dies daran liegen,dass der Zugriff auf diese Sensoren nicht möglich ist.</p>
+                    <p>Zur Ermittlung der Richtung in welche der Spieler sich bewegen möchte wird werden Gerätesensoren zur Bestimmung der „DeviceOrientation“ verwendet.</p>
+                    <p>Es wird ermittelt, ob sich die Ausrichtung des Bildschirms verändert hat, um das Spielgeschehen zu unterbrechen, da dabei Elemente des Spiels nicht mehr korrekt angezeigt werden.</p>
+                </article>
+            </section>
+            <section>
+                <article>
+                    <h3>Spielprinzip</h3>
+                    <p>Der Sturkopf, der durch einen roten Kreis in der Mitte des Spielfeldes dargestellt wird, läuft immer geradeaus und droht dabei mit diversen Hindernissen zu kollidieren. Zum Glück zeigt er uns mit einer kleinen Spitze in welche Richtung er sich bewegen möchte. Damit der Sturkopf nicht gegen Hindernisse läuft müssen wir seine gesamte Welt um ihm herum drehen. In unserem Fall bedeutet das, das Mobile Gerät zu drehen. Dies geht am besten und gefahrlosesten auf einer ebenen und glatten Oberfläche.</p>
+                    <p>Durch anheben des oberen Endes des Mobilen Geräts ab etwa 30° wird das Spiel pausiert.</p>
+                    <p>WARNUNG: Bei unsachgemäßer handhabung des Geräts können Kratzer oder schwere Beschädigungen entstehen. Wir übernehmen keinerlei Verantwortung für Schäden, die der Spieler während des spielens an seinem Gerät verursacht.</p>
+                </article>
+            </section>
+            <section>
+                <article>
+                    <h3>Sieg und Niederlage</h3>
+                    <p>Das Spiel ist gewonnen, wenn die der Schwierigkeit entsprechende Menge an Punkten erreicht wird. Punkte verdient sich der Sturkopf durch das aufsammeln der grünen (1 Punkt), blauen (2 Punkte) und gelben (3 Punkte) Kreise.</p>
+                    <p>Erschwert wird die Aufgabe dadurch, dass die grünen Kreise den Sturkopf verlangsamen und die gelben ihn beschleunigen. Dadurch kann es dazu kommen, dass der Sturkopf zu schnell wird, um noch gesteuert werden zu können, oder einfach stehen bleibt. In der einfachen Variante bleibt der Sturkopf nie stehen.</p>
+                    <p>Der Spieler hat verloren, wenn der Sturkopf mit einem Hindernis (Graue Kreise und Spielfeldwand) kollidiert oder stehen bleibt. In der Schweren Variante ist das Spiel ebenfalls verloren, sollten die nötigen Punkte überschritten werden.</p>
+                    <p>Die größtmögliche Schwierigkeit ist bei Nutzung in öffentlichen Verkehrsmitteln, die häufig ihre Richtung wechseln, gegeben. Allerdings sollte hier auch besonders darauf geachtet werden beim spielen das eigene Gerät nicht zu beschädigen oder durch unvorsichtige Bewegungen Mitreisende zu stören.</p>
+                </article>
+            </section>
+        </main>
+
+        <footer>
+            <div id="copyright"><p>©2020 by jlmb</p></div>
+            <div id="impressum"><p><a href="https://jlmb.eu/de/impressum/">Impressum</a></p></div>
+        </footer>
+    </body>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/ext/nosleep.min.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/tic.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/sensor.js"></script>
+    <script src="js/field.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/target.js"></script>
+    <script src="js/obstacle.js"></script>
+</html>

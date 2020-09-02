@@ -1,0 +1,23 @@
+
+@charset "utf-8";
+
+:root {
+    /* Change data here */
+    --header-color-bg: Gainsboro;
+    --bg-color-top: DarkSlateBlue;
+    --bg-color-bot: DarkSlateGrey;
+    --section-color-top: Gainsboro;
+    --section-color-bot: Gainsboro;
+    --menu-color-bg: #333333;
+    --menu-color-button-hover: #111111;
+    --percent-width-image: 40%;
+    --percent-width-text: 60%;
+    --percent-width-content-web: 70%;
+    --percent-left-content-web: 15%;
+    --percent-width-content-mobile: 100%;
+    --percent-left-content-mobile: 0%;
+    /* Should be 100px (+ 50px if menu is used) */
+    --pixel-height-header-web: 150px;
+    /* Should be 100px + 50px times menuItems */
+    --pixel-height-header-mobile: 150px;
+}

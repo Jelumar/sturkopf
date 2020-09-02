@@ -1,0 +1,98 @@
+
+html {
+    background: DarkSlateGrey;
+}
+
+#points {
+    top: 0px;
+    left: 0px;
+    text-align: left;
+}
+
+#speed {
+    top: 0px;
+    right: 0px;
+    text-align: right;
+}
+
+#light {
+    bottom: 0px;
+    right: 0px;
+    text-align: right;
+}
+
+.hider {
+    background-color: Black;
+    z-index: 12;
+}
+
+.gameInfo {
+    padding: 5px;
+    z-index: 11;
+    color: White;
+    background-color: Black;
+}
+
+#info {
+    border-radius: 25px;
+    background-color: Black;
+    z-index: 12;
+}
+
+#infotext {
+    font-size: 200%;
+    text-align: center;
+    color: White;
+    z-index: 13;
+}
+
+.infoButton {
+    font-size: 200%;
+    background-color: Gainsboro;
+    text-align: center;
+    z-index: 13;
+}
+
+.rounded {
+    border-radius: 100%;
+}
+
+.gameObject {
+    position: absolute;
+}
+
+#player {
+    background-color: FireBrick;
+    z-index: 9;
+}
+
+#playerDirection {
+    opacity: 0.5;
+    z-index: 10;
+}
+
+.border {
+    background-color: DarkSlateGrey;
+    z-index: 7;
+}
+
+.obstacle {
+    background-color: DarkSlateGrey;
+    z-index: 8;
+}
+
+.target {
+    z-index: 8;
+}
+
+.fast {
+    background-color: GoldenRod;
+}
+
+.eqal {
+    background-color: DarkSlateBlue;
+}
+
+.slow {
+    background-color: SeaGreen;
+}
